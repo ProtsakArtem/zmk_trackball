@@ -32,7 +32,9 @@ west build -s zmk/app -b promicro_nrf52840/nrf52840/uf2 -- -DSHIELD=pmw3610_trac
 
 ## Notes
 
-- BLE is enabled, USB is disabled in `config/pmw3610_trackball.conf`.
+- BLE and USB are enabled in `config/pmw3610_trackball.conf`.
 - PMW3610 external driver is included through `config/west.yml`.
 - This setup uses the external module variant: `compatible = "pixart,pmw3610-alt"` and
   `CONFIG_PMW3610_ALT=y`.
+- `CONFIG_ZMK_BLE_CLEAR_BONDS_ON_START=y` is enabled for debugging/pairing reset.
+  Turn it off after first successful pairing to keep bonds across reboot.
