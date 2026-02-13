@@ -33,6 +33,7 @@ west build -s zmk/app -b promicro_nrf52840/nrf52840/uf2 -- -DSHIELD=pmw3610_trac
 ## Notes
 
 - BLE and USB are enabled in `config/pmw3610_trackball.conf`.
+- BLE device name is `PMW3610 TB` (ZMK limit: max 16 chars).
 - PMW3610 external driver is included through `config/west.yml`.
 - This setup uses the external module variant: `compatible = "pixart,pmw3610-alt"` and
   `CONFIG_PMW3610_ALT=y`.
