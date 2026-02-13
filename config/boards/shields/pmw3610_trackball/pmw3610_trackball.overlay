@@ -1,8 +1,20 @@
 #include <dt-bindings/gpio/gpio.h>
 #include <dt-bindings/input/input-event-codes.h>
 #include <dt-bindings/pinctrl/nrf-pinctrl.h>
+#include <dt-bindings/zmk/matrix_transform.h>
 
 / {
+    chosen {
+        zmk,matrix-transform = &trackball_transform;
+    };
+
+    trackball_transform: matrix_transform_0 {
+        compatible = "zmk,matrix-transform";
+        rows = <1>;
+        columns = <1>;
+        map = <RC(0,0)>;
+    };
+
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
