@@ -17,5 +17,4 @@ jobs:
     with:
       config_path: config
       build_matrix_path: build.yaml
-    secrets:
-      github_token: ${{ secrets.GITHUB_TOKEN }}
+    secrets: inherit
