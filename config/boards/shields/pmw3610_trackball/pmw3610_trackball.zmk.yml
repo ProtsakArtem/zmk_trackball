@@ -1,0 +1,6 @@
+file_format: "1"
+id: pmw3610_trackball
+name: PMW3610 Trackball
+type: shield
+features:
+  - pointer

@@ -1,0 +1,3 @@
+include:
+  - board: promicro_nrf52840
+    shield: pmw3610_trackball
