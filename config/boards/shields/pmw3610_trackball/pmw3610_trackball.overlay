@@ -21,6 +21,15 @@
     };
 };
 
+&gpio0 {
+    sensor_vcc_enable {
+        gpio-hog;
+        gpios = <13 GPIO_ACTIVE_HIGH>;
+        output-high;
+        line-name = "sensor-vcc-enable";
+    };
+};
+
 &spi0 {
     compatible = "nordic,nrf-spim";
     status = "okay";
@@ -39,6 +48,7 @@
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
+        force-awake;
     };
 };
 

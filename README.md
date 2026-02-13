@@ -39,3 +39,8 @@ west build -s zmk/app -b promicro_nrf52840/nrf52840/uf2 -- -DSHIELD=pmw3610_trac
   `CONFIG_PMW3610_ALT=y`.
 - `CONFIG_ZMK_BLE_CLEAR_BONDS_ON_START=y` is enabled for debugging/pairing reset.
   Turn it off after first successful pairing to keep bonds across reboot.
+- `CONFIG_PMW3610_ALT_INIT_POWER_UP_EXTRA_DELAY_MS=1000` is enabled to improve
+  PMW3610 startup reliability on boards where 3.3V peripherals come up late.
+- `force-awake;` is enabled in the PMW3610 node for bring-up and debugging.
+- `P0.13` is forced HIGH via `gpio-hog` to keep external `3.3V VCC` enabled on
+  SuperMini-style nRF52840 boards.
