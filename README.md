@@ -34,3 +34,5 @@ west build -s zmk/app -b promicro_nrf52840 -- -DSHIELD=pmw3610_trackball -DZMK_C
 
 - BLE is enabled, USB is disabled in `config/pmw3610_trackball.conf`.
 - PMW3610 external driver is included through `config/west.yml`.
+- This setup uses the external module variant: `compatible = "pixart,pmw3610-alt"` and
+  `CONFIG_PMW3610_ALT=y`.
