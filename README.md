@@ -5,7 +5,7 @@ that uses only the `PMW3610` sensor (no keyboard matrix).
 
 ## Build target
 
-- Board: `promicro_nrf52840`
+- Board: `promicro_nrf52840/nrf52840/uf2`
 - Shield: `pmw3610_trackball`
 
 ## Wiring used in overlay
@@ -27,7 +27,7 @@ west init -l config zmk-app
 cd zmk-app
 west update
 west zephyr-export
-west build -s zmk/app -b promicro_nrf52840 -- -DSHIELD=pmw3610_trackball -DZMK_CONFIG="%CD%\\..\\config"
+west build -s zmk/app -b promicro_nrf52840/nrf52840/uf2 -- -DSHIELD=pmw3610_trackball -DZMK_CONFIG="%CD%\\..\\config"
 ```
 
 ## Notes
